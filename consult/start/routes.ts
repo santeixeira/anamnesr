@@ -21,6 +21,13 @@ import Database from '@ioc:Adonis/Lucid/Database'
 import Route from '@ioc:Adonis/Core/Route'
 //import {main} from '../quickstart-main/typescript/starter/script'
 
-Route.get('/', async () => {
-  return Database.from('pessoas').select('*')
-})
+Route.group(() => {
+  Route.get('/', async () => {
+    return await Database
+      .from('pessoas')
+      .select('*')
+      .whereRaw('id_login = ?', [1])
+      
+  })
+}).prefix('/api')
+
