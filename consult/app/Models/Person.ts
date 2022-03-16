@@ -9,29 +9,29 @@ export default class Person extends BaseModel {
   public nome: string
 
   @column()
-  public cpf: string
+  public nacionalidade: string
 
   @column()
-  public data_nascimento: DateTime
- 
+  public naturalidade: string
+
   @column()
-  public endereco: Object
+  public estado_civil: string
 
   @column()
   public sexo: string
 
   @column()
-  public estado_civil: string
+  public data_nascimento: DateTime
+
+  @column()
+  public cpf: string
+ 
+  @column()
+  public endereco: Object
 
   @column()
   public numero_contato: string
 
   @column()
   public profissao: string
-
-  @column.dateTime({ autoCreate: true })
-  public createdAt: DateTime
-
-  @column.dateTime({ autoCreate: true, autoUpdate: true })
-  public updatedAt: DateTime
 }

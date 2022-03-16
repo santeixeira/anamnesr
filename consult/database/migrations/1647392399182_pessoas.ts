@@ -1,11 +1,11 @@
 import BaseSchema from '@ioc:Adonis/Lucid/Schema'
 
-export default class Person extends BaseSchema {
-  protected tableName = 'person'
+export default class Pessoas extends BaseSchema {
+  protected tableName = 'pessoas'
 
   public async up () {
     this.schema.createTable(this.tableName, (table) => {
-      table.foreign('id')
+      table.increments('id')
       table.timestamps(true)
     })
   }
