@@ -15,10 +15,10 @@ export default class Login extends BaseModel {
   public password: string
 
   @column()
-  public remember_me_token: number
+  public remember_me_token: string
 
   @column()
-  public access_token: Object
+  public access_token: string
 
   @column.dateTime({ autoCreate: true })
   public createdAt: DateTime

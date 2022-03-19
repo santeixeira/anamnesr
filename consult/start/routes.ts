@@ -16,5 +16,8 @@ Route.group(() => {
     .resource('users', 'UsersController')
     .middleware({ '*': ['auth'] })
 
+  Route 
+    .resource(`/client`, 'ClientsController').apiOnly()
+
 }).prefix('/api')
 
