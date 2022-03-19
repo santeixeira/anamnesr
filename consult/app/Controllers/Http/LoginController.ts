@@ -1,3 +1,13 @@
+/*
+______________________________________________________
+|                                                    |
+|                                                    |
+|---   This was written just to help me to code   ---|
+|                                                    |
+|____________________________________________________|
+
+
+
 import type { HttpContextContract } from '@ioc:Adonis/Core/HttpContext'
 import Login from 'App/Models/Login'
 import { v4 as uuidv4} from 'uuid'
@@ -33,3 +43,4 @@ export default class LoginController {
     }
   }
 }
+*/

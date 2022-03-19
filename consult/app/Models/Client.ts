@@ -1,12 +1,13 @@
 import { DateTime } from 'luxon'
 import { BaseModel, column, HasOne, hasOne } from '@ioc:Adonis/Lucid/Orm'
-import Login from 'App/Models/Login'
+
+import Auth from 'App/Models/Auth'
 
 export default class Client extends BaseModel {
-  @hasOne (() => Login, {
+  @hasOne (() => Auth, {
     foreignKey: 'id'
   })
-  public id: HasOne<typeof Login>
+  public id: HasOne<typeof Auth>
 
   @column()
   public nome: string

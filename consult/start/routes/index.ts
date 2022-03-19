@@ -1,10 +1,6 @@
-/*
-|--------------------------------------------------------------------------
-| Routes
-|--------------------------------------------------------------------------
-|
-*/
 import Route from '@ioc:Adonis/Core/Route'
+import './auth.ts'
+import './client.ts'
 
 Route.group(() => {
   Route.get('/home', async () => {
@@ -15,9 +11,5 @@ Route.group(() => {
   Route
     .resource('users', 'UsersController')
     .middleware({ '*': ['auth'] })
-
-  Route 
-    .resource(`/client`, 'ClientsController').apiOnly()
-
 }).prefix('/api')
 
