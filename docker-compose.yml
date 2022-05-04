@@ -1,0 +1,21 @@
+version: '3.9'
+services:
+
+  database:
+    image: mysql
+    platform: linux/x86_64
+    container_name: anamnesr
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DB_NAME}
+    ports:
+      - '3306:8000'
+    expose:
+      - '3306'
+    volumes:
+      - /var/lib/docker/volumes/anamnesr/_data
+
+volumes:
+  anamnesr-mysql:
